@@ -2,12 +2,24 @@
   <head>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="/index.js"></script>
+    <style>@import url(/index.css);</style>
   </head>
   <body>
     <a-scene>
-      <a-box color="#6173F4" opacity="0.8" depth="2"></a-box>
-      <a-sphere radius="2" src="texture.png" position="1 1 0"></a-sphere>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-plane material='src: url(hex.png); repeat: 32 32;' width='128' height='128' rotation='-90 0 0' position='0 0 -10'></a-plane>
+
+      <a-obj-model src="/models/hexagon.obj" color='#0fa' position='-0.1 -0.5 -2' scale='0.4 0.4 0.4'></a-obj-model>
+      <a-obj-model src="/models/hexagon.obj" color='#0fa' position='0.5 -0.5 -2' scale='0.4 0.4 0.4'></a-obj-model>
+      <a-obj-model src="/models/hexagon.obj" color='#0fa' position='1.05 -0.5 -2' scale='0.4 0.4 0.4'></a-obj-model>
+
+      <a-sphere color='#f0a' position='2 1 -10'></a-sphere>
+      <a-sphere color='#f70' position='-2 1 -10'></a-sphere>
+
+      <a-sky color='white'></a-sky>
+
+      <a-entity id='world'>
+
+      </a-entity>
     </a-scene>
   </body>
 </html>
